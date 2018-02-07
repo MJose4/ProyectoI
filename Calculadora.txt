@@ -1,0 +1,60 @@
+echo off
+echo HACER UNA CALCULADORA
+: Calculadora
+cls
+color 3
+echo    	**********************
+echo 		Calculadora
+echo    	**********************
+echo 	1. Sumar
+echo 	2. Restar
+echo 	3. Multiplicar
+echo 	4. Dividir
+echo 	5. Salir
+echo    	**********************
+set /p opcion= Escriba la opcion: 
+if %opcion%==1 goto suma
+if %opcion%==2 goto resta
+if %opcion%==3 goto multiplicacion
+if %opcion%==4 goto division
+if %opcion%==5 goto Sal
+goto Calculadora
+: suma
+cls
+echo SUMA
+set /p va= Ingrese el valor de a:
+set /p vb= Ingrese el valor de b:
+set /a c=%va%+%vb%
+echo Resultado:%c%
+pause 
+goto Calculadora
+: resta
+cls
+echo RESTA
+set /p va= Ingrese el valor de a:
+set /p vb= Ingrese el valor de b:
+set /a c=%va%-%vb%
+echo Resultado:%c%
+pause
+goto Calculadora
+: multiplicacion
+cls
+echo MULTIPLICACION
+set /p va= Ingrese el valor de a:
+set /p vb= Ingrese el valor de b:
+set /a c=%va%*%vb%
+echo Resultado:%c% 
+pause
+goto Calculadora
+: division
+cls
+echo DIVISION
+set /p va= Ingrese el valor de a:
+set /p vb= Ingrese el valor de b:
+
+set /a c=%va%/%vb%
+echo Resultado:%c%
+pause 
+goto Calculadora
+: Sal
+echo 	!!Adios!!
